@@ -1,13 +1,15 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
 int main()
 {
-    int size =3;
-    int arr[size];
-    int target ;
+    int size,target;
+   // int arr[size];
     int sum=0;
-
+    cout<<"Enter the Size of Array : ";
+    cin >> size;
+    vector<int> arr(size);
     for (int i=0 ; i<=size;i++)
     {
         cout <<" ";
