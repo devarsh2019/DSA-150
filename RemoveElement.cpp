@@ -26,14 +26,13 @@ int main()
           for(int j = i ; j<size;j++)
           {
             arr[j] = arr[j+1];
-            
-            break;
           }
-            
+            i--;
         }
     }
     for (int i=0 ; i<size;i++)
     {
         cout << arr[i];
     }
+    cout<<" "<<size;
 }
