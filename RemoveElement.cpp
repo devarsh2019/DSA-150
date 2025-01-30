@@ -18,21 +18,17 @@ int main()
     cout<<"Enter the Value to be removed";
     cin>>value;
 
-    for (int i =0 ; i<size;i++)
+    int k=0;
+    for (int i =0 ; i< size; i++)
     {
-        if(arr[i] == value)
+        if (arr[i] != value)
         {
-            size=size-1;
-          for(int j = i ; j<size;j++)
-          {
-            arr[j] = arr[j+1];
-          }
-            i--;
+            arr[k] = arr[i];
+            k++;
         }
     }
-    for (int i=0 ; i<size;i++)
-    {
-        cout << arr[i];
+   for (int i = 0; i < k; i++) {
+        cout << arr[i] << " ";
     }
-    cout<<" "<<size;
+    cout << "\nNew size: " << k << endl;
 }
