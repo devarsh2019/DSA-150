@@ -9,7 +9,7 @@ bool palindrome(int num)
     int originalNumber =num;
     int res =0;
    // bool chkPalindrome = false;
-    while( num != 0)
+    while( num > 0)
     {
         int temp = num%10;
         res = res*10 + temp;
