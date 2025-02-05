@@ -4,10 +4,13 @@ using namespace std;
 void gcd(int num1 ,int num2)
 {
     int gcd;
-    for(int i=0 ; i<=min(num1,num2);i++)
+    for(int i=min(num1,num2) ; i>0;i--)
     {
         if(num1%i == 0 && num2%i==0)
+        {
         gcd = i;
+        break;
+        }
     }
    cout <<"GCD : "<<gcd;
 }
