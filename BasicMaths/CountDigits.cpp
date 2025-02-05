@@ -1,15 +1,12 @@
 #include<iostream>
+#include<math.h>
 using namespace std;
 
 int countDigit(int& num)
 {
-    int counter=0;
-    while(num > 0)
-{
-   num = num/10;
-   counter++    ;
-}
-return counter;
+    //Time complexity O(1)
+    int res = (int)(log10(num) + 1);
+    return res; 
 }
 int main()
 {
