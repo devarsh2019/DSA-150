@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
 class Node
@@ -14,14 +15,19 @@ class Node
         left = NULL;
         right = NULL;
     }
-   
 };
-void preorder(Node* root)
+void preorder(Node* root ,vector<int> &arr)
 {
     if (root == NULL) return;
-    cout<<root->data<<" ";
-    preorder(root->left);
-    preorder(root->right); 
+    arr.push_back(root->data);
+    preorder(root->left,arr);
+    preorder(root->right,arr); 
+}
+vector<int> preOrder(Node* root){
+    
+    vector<int> arr;
+    preorder(root, arr);
+    return arr;
 }
 int main()
 {
@@ -32,7 +38,11 @@ int main()
     root->left->right = new Node(5);
     root->right->right = new Node(6);
 
-    cout << "Preorder traversal of binary tree is: \n";
-    preorder(root);
+    vector<int> result = preOrder(root);
 
+    cout << "Preorder Traversal: ";
+    for(int val : result) {
+        cout << val << " ";
+    }
+    cout << endl;
 }
